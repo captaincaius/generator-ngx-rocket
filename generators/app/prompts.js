@@ -49,29 +49,10 @@ module.exports = [
         name: 'Android',
         checked: true
       }
-    ]
-  },
-  {
-    type: 'checkbox',
-    name: 'desktop',
-    message: 'Which desktop platform do you want to support?',
-    when: props => props.target && props.target.includes('electron'),
-    choices: [
-      {
-        value: 'windows',
-        name: 'Windows',
-        checked: true
-      },
-      {
-        value: 'mac',
-        name: 'macOS',
-        checked: true
-      },
-      {
-        value: 'linux',
-        name: 'Linux',
-        checked: true
-      }
+      // {
+      //   value: 'windows',
+      //   name: 'Windows (Universal)'
+      // }
     ]
   },
   {
@@ -131,7 +112,6 @@ module.exports = [
     name: 'lazy',
     message: 'Do you want lazy loading?',
     default: false,
-    when: props => props.ui !== 'ionic'
   },
   {
     type: 'confirm',
